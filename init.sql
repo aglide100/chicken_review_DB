@@ -1,4 +1,6 @@
-ALTER USER heejun WITH SUPERUSER;
+GRANT ALL PRIVILEGES ON DATABASE chicken_review TO review_admin;
+
+--ALTER USER review_admin WITH SUPERUSER;
 
 --CREATE EXTENSION pgcrypto;
 

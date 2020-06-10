@@ -1,9 +1,3 @@
-# postgres/Dockerfile
-FROM postgres:11.7
-#FROM postgres:9.3
-#ENV POSTGRES_USER
-#ENV POSTGRES_PASSWORD
-#ENV POSTGRES_DB
+FROM postgres:12-alpine
 
-#ENTRYPOINT ./postgres/init-user-db.sh
-#EXPOSE 5666
+COPY init.sql /docker-entrypoint-initdb.d/10-init.sql
