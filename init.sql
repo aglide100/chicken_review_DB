@@ -16,9 +16,9 @@ CREATE TABLE review (
     PhoneNumber     text,
     Comment         text,
     Score           int,
-    Addr            text
-    lat             numeric,
-    lng             numeric
+    Addr            text,
+    lat             varchar(30),
+    lng             varchar(30)
 );
 
 CREATE TABLE account (
@@ -29,4 +29,17 @@ CREATE TABLE account (
     PhoneNumber text,
     Language text,
     SubscriptionDate DATE NOT NULL DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE provider_account (
+    Provider text,
+    Email text,
+    Name text,
+    FirstName text,
+    LastEName text,
+    NickName text,
+    Description text,
+    UserID text,
+    AvatarURL text,
+    Location text
 );
