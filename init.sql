@@ -17,8 +17,8 @@ CREATE TABLE review (
     Comment         text,
     Score           int,
     Addr            text,
-    Lat            numeric(4,6),
-    Lng             numeric(4,6)
+    Lat            numeric,
+    Lng             numeric
 );
 
 CREATE TABLE account (
@@ -43,3 +43,4 @@ CREATE TABLE provider_account (
     AvatarURL text,
     Location text
 );
+
