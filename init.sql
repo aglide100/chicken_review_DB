@@ -17,8 +17,8 @@ CREATE TABLE review (
     Comment         text,
     Score           int,
     Addr            text,
-    lat            numeric(4,6),
-    lng             numeric(4,6)
+    Lat            numeric(4,6),
+    Lng             numeric(4,6)
 );
 
 CREATE TABLE account (
