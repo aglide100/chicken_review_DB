@@ -15,7 +15,7 @@ CREATE TABLE review (
     Date            text,
     PhoneNumber     text,
     Comment         text,
-    Score           int,
+    Score           varchar(2),
     Addr            text,
     Lat            numeric,
     Lng             numeric
