@@ -6,7 +6,7 @@ GRANT ALL PRIVILEGES ON DATABASE chicken_review TO review_admin;
 --CREATE EXTENSION pgcrypto;
 
 CREATE TABLE review (
-    ID      serial,
+    ID      serial PRIMARY KEY,
     Title   varchar(80),
     Author  varchar(30),
     DefaultPictureURL   varchar(200),
@@ -17,8 +17,8 @@ CREATE TABLE review (
     Comment         text,
     Score           varchar(2),
     Addr            text,
-    Lat            numeric,
-    Lng             numeric
+    Lat            real,
+    Lng             real
 );
 
 CREATE TABLE account (
@@ -41,6 +41,8 @@ CREATE TABLE provider_account (
     Description text,
     UserID text,
     AvatarURL text,
-    Location text
+    Location text,
+    CREATED_ON TIMESTAMP NOT NULL,
+	LAST_LOGIN TIMESTAMP
 );
 
