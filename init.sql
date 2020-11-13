@@ -7,8 +7,8 @@ GRANT ALL PRIVILEGES ON DATABASE chicken_review TO review_admin;
 
 CREATE TABLE review (
     ID      serial PRIMARY KEY,
-    Title   varchar(80),
-    Author  varchar(30),
+    Title   varchar(200),
+    Author  varchar(200),
     DefaultPictureURL   varchar(200),
     PictureURLS     text[],
     StoreName       text,
@@ -17,8 +17,8 @@ CREATE TABLE review (
     Comment         text,
     Score           varchar(2),
     Addr            text,
-    Lat            real,
-    Lng             real
+    Lat             float,
+    Lng             float
 );
 
 CREATE TABLE account (
@@ -45,4 +45,3 @@ CREATE TABLE provider_account (
     CREATED_ON TIMESTAMP NOT NULL,
 	LAST_LOGIN TIMESTAMP
 );
-
